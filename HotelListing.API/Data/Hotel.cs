@@ -1,10 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HotelListing.API.Data
 {
     public class Hotel
     {
-
+       
         public int Id { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
@@ -12,7 +13,7 @@ namespace HotelListing.API.Data
 
         [ForeignKey(nameof(CountryId))]
 
-
+        
         public int  CountryId { get; set; }
         public Country  country { get; set; }
 
